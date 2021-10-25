@@ -1,7 +1,4 @@
 <?php
-$monthname = date('M');
-$monthname = strtolower($monthname);
-$monthnumber = date('n');
 $specials_alt = array(
 	'January special: Cacti galore',
 	'February special: Flowers and hearts for Valentines',
@@ -48,8 +45,9 @@ foreach ($seasons AS $key => $montharray) {
 <body class="no_col_2">
 <div id="site">
 <?php require 'includes/pagetop.php';
-/* Put processing code for $monthname here if
-   you need to set the timezone in pagetop.php. */
+$monthname = date('M');
+$monthname = strtolower($monthname);
+$monthnumber = date('n');
  ?>
 	<div id="content">
 		<div id="col_1" role="main">
