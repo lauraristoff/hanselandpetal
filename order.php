@@ -1,4 +1,5 @@
 <?php
+/*Creates a session variable*/
 session_start();
 if (isset($_POST['bouquet'])) {
 	foreach ($_POST AS $key => $value) {
@@ -31,6 +32,7 @@ $price = array(
     'Lilac' => 4,
     'Daisies' => 1
     );
+/*extracts file name*/
 function getColor($filename) {
 	$parts = explode('_', $filename);
 	return ucfirst($parts[2]);

@@ -1,7 +1,4 @@
 <?php
-$monthname = date('M');
-$monthname = strtolower($monthname);
-$monthnumber = date('n');
 $specials_alt = array(
 	'January special: Cacti galore',
 	'February special: Flowers and hearts for Valentines',
@@ -22,7 +19,6 @@ $features = array(
 	'summer' => "It's summer, and we're in the pink!",
 	'autumn' => "Summer's over, but our flowers are still a riot of colors."
 	);
-
 $seasons = array(
 	'winter' => array('dec', 'jan', 'feb'),
 	'spring' => array('mar', 'apr', 'may'),
@@ -48,9 +44,10 @@ foreach ($seasons AS $key => $montharray) {
 <body class="no_col_2">
 <div id="site">
 <?php require 'includes/pagetop.php';
-/* Put processing code for $monthname here if
-   you need to set the timezone in pagetop.php. */
- ?>
+$monthname = date('M');
+$monthname = strtolower($monthname);
+$monthnumber = date('n');
+?>
 	<div id="content">
 		<div id="col_1" role="main">
 			<h1>Beautiful Flowers, Artfully Arranged</h1>
@@ -58,7 +55,7 @@ foreach ($seasons AS $key => $montharray) {
 				<div class="inner">
 					<p class="overlay large"><?php echo $features[$season]; ?></p>
 					<p class="overlay price">Starting at $45.95</p>
-					<img src="images/feature_<?php echo $season; ?>.jpg" alt="White Rose Arrangement" height="410" width="980"> </div>
+					<img src="images/feature_<?php echo $season; ?>.jpg" alt="<?php echo $specials_alt[$monthnumber - 1]; ?>" height="410" width="980"> </div>
 			</div>
 			<div class="section">
 				<div class="title clearfix">

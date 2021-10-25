@@ -1,7 +1,8 @@
 <?php
+/*connecting to the database*/
 ini_set('display_errors', '0');
 $message = '';
-$db = new MySQLi('localhost', 'phpwebdes', 'lynda', 'hanselandpetal');
+$db = new MySQLi('localhost', 'lristoff', 'hanselandpetal', 'hanselandpetal');
 if ($db->connect_error) {
 	$message = $db->connect_error;
 } else {
