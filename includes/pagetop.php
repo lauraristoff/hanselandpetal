@@ -1,9 +1,15 @@
 <?php
 /* $siteroot points to the development folder.
+<<<<<<< HEAD
    Reset it to an empty string when deploying the live site.  */
 
 $siteroot = './';
 date_default_timezone_set('America/New_York');
+=======
+   Reset it to an empty string when deploying the live site. */
+$siteroot = '';
+// date_default_timezone_set('America/Los_Angeles');
+>>>>>>> 241d47c8118fd74449a024a89281247506c3ea6f
 ?>
 	<div id="header" role="banner">
 		<h1 id="logo"><a href="<?php echo $siteroot; ?>/index.php"><img src="<?php echo $siteroot; ?>/images/logo.png" alt="Hansel and Petal" height="124" width="207"></a></h1>
