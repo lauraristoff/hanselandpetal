@@ -1,4 +1,7 @@
 <?php
+$monthname = date('M');
+$monthname = strtolower($monthname);
+$monthnumber = date('n');
 $specials_alt = array(
 	'January special: Cacti galore',
 	'February special: Flowers and hearts for Valentines',
@@ -43,11 +46,7 @@ foreach ($seasons AS $key => $montharray) {
 
 <body class="no_col_2">
 <div id="site">
-<?php require 'includes/pagetop.php';
-$monthname = date('M');
-$monthname = strtolower($monthname);
-$monthnumber = date('n');
-?>
+<?php require 'includes/pagetop.php';?>
 	<div id="content">
 		<div id="col_1" role="main">
 			<h1>Beautiful Flowers, Artfully Arranged</h1>
